@@ -6,6 +6,10 @@ Angular crash course - workshop, from ACM Alexandria student chapter event in Se
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
 
+## Once you have downloaded or cloned this repo
+
+Run `npm install` to download and install all dependencies packages you will need, then,
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
