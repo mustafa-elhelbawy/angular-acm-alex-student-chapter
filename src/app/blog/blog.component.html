@@ -6,13 +6,16 @@
     </div>
 </div>
 
-<div class="row my-4">
-    <div class="col-4">
+<div class="container text-center" *ngIf="!postsList">
+    <h1 class="bg-light py-4">Loading posts...</h1>
+</div>
+<div class="row my-4" *ngIf="postsList">
+    <div class="col-4 my-2" *ngFor="let postItem of postsList">
         <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <h5 class="card-title">{{postItem.title}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Author: user id # {{postItem.userId}}</h6>
+                    <p class="card-text">{{postItem.body}}</p>
                     <a href="#" class="card-link">Card link</a>
                     <a href="#" class="card-link">Another link</a>
                 </div>
