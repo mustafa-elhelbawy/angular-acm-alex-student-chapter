@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-blog',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
+  postsList;
 
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() {
+    this.apiService.getPosts().subscribe(response => {
+      this.postsList = response;
+    })
   }
 
 }
